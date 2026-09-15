@@ -1,9 +1,10 @@
+""" retourne l'ensembles des robots effectuant les deux missions """
 def robots_double_mission(robots_exploration, robots_transport):
     return robots_exploration & robots_transport
-
+""" retourne l'ensembles des robots effectuant les missions """
 def robots_toutes_missions(robots_exploration, robots_transport):
     return robots_exploration | robots_transport
-
+""" retourne l'ensembles des robots effectuant que l'exploration """
 def robots_exploration_seulement(robots_exploration, robots_transport):
     return robots_exploration - robots_transport
 
@@ -18,16 +19,17 @@ assert double_mission == {"R5", "R7"}
 assert toutes_missions == {"R2", "R3", "R5", "R7", "R9"}
 assert exploration_seule == {"R2"}
 
+"""fonction permettant d'ajouter un robot dans une mission"""
 def ajouter_robots_mission(mission, robot):
-    new_mission = set()
-    new_mission = new_mission | mission
-    new_mission.add(robot)
+    new_mission = set() #creation d'un nouveau ensemble
+    new_mission = new_mission | mission # on recopie l'ensemble
+    new_mission.add(robot) # ajout du robot
     return new_mission
     
 def retirer_robot_mission(mission, robot):
     new_mission = set()
     new_mission = new_mission | mission
-    new_mission.remove(robot)
+    new_mission.remove(robot) # suppression du robot
     return new_mission
     
 
