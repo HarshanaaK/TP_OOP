@@ -1,0 +1,9 @@
+# Ignorer le cache de compilation Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorer les environnements virtuels (si vous en utilisez un)
+.venv/
+venv/
