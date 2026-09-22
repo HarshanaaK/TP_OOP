@@ -5,7 +5,7 @@ class Habitant:
         self.nom = nom
         self.age = age
         self.adresse = adresse
-        self.animaux = animaux if animaux is not None else []
+        self.animaux = animaux if animaux is not None else {}
 
     def affichage_adresse(self):
         """Affiche l'adresse de l'habitant."""
