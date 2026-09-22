@@ -42,8 +42,8 @@ assert len(pytown.get_habitants()) == 2
 assert elise in autre_village.get_habitants()
 
 
-"""Question 3: ajouter_habitant_composition est dépendant de la classe habitant
-car elle crére une instance habitant à l'intérieur de la méthode,
-tandis que la méthode ajouter_habitant_agregation ne dépend pas de la classe habitant
-car elle prend un objet habitant en paramétre ainsi si on supprime la classe habitant la méthode peut toujours exister
-et  fonctionner avec d'autre classes."""
+#Question 3: ajouter_habitant_composition est dépendant de la classe habitant
+#car elle crére une instance habitant à l'intérieur de la méthode,
+#tandis que la méthode ajouter_habitant_agregation ne dépend pas de la classe habitant
+#car elle prend un objet habitant en paramétre ainsi si on supprime la classe habitant la méthode peut toujours exister
+#et  fonctionner avec d'autre classes."""
