@@ -62,5 +62,28 @@ class TestVillage(unittest.TestCase):
         self.assertIn(habitant, village2.get_habitants())
 
 
+"""Écrivez une classe TestHeritage qui vérifie que calcul_nombre_annee_avant_retraite()
+renvoie bien un résultat cohérent pour un Adulte et pour un Enfant, et que la création d’un Enfant de 20 ans
+lève bien une ValueError (cas limite)"""
+
+class TestHeritage(unittest.TestCase):
+    """Tests pour les classes Adulte et Enfant et la méthode calcul_nombre_annee_avant_retraite."""
+
+    def test_calcul_nombre_annee_avant_retaite_adulte(self):
+        """Cas normal : calcul du nombre d'année avant la retraite pour un adulte"""
+        adulte = Adulte("Dupont", "Marie", 35, "Rue A")
+        self.assertEqual(adulte.calcul_nombre_annee_avant_retraite(), 27)
+
+    def test_calcul_nombre_annee_avant_retaite_enfant(self):
+        """Cas normal : calcul du nombre d'année avant la retraite pour un enfant"""
+        enfant = Enfant("Dupont", "Jean", 10, "Rue A")
+        self.assertEqual(enfant.calcul_nombre_annee_avant_retraite(), "Erreur: un enfant ne peut pas calculer sa retraite")
+
+    def test_creation_enfant_age_invalide(self):
+        """Cas limite : création d'un enfant de 20 ans"""
+        with self.assertRaises(ValueError):
+            Enfant("Dupont", "Jean", 20, "Rue A")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
