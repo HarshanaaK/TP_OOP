@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from operator import le
+
 
 class Habitant:
 
